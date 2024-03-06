@@ -1,0 +1,92 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="insert_data" author="Harsh">
+        <comment>Inserting Data</comment>
+        <insert tableName="sep_enrollment_events">
+            <column name="id" valueNumeric="4"/>
+            <column name="event_name" value="ADOPTION"/>
+            <column name="event_type" valueNumeric="1"/>
+            <column name="mrc_code" value="05"/>
+            <column name="event_label" value="Adoption"/>
+            <column name="event_category" value="ADD"/>
+            <column name="is_financial" value="Y"/>
+            <column name="change_type" value="ADD"/>
+            <column name="display_on_ui" value="Y"/>
+            <column name="allow_future_event" value="N"/>
+            <column name="is_gated" value="N"/>
+            <column name="source" value="EXCHANGE"/>
+            <column name="manual_verification_reqd" value="Y"/>
+            <column name="allow_plan_selection" valueNumeric="1"/>
+            <column name="effective_start_date" value="null"/>
+            <column name="effective_end_date" value="null"/>
+            <column name="market_stabilization" value="true"/>
+            <column name="multiple_change_plan" valueNumeric="0"/>
+        </insert>
+        <insert tableName="sep_enrollment_events">
+            <column name="id" valueNumeric="203"/>
+            <column name="event_name" value="DIVORCE"/>
+            <column name="event_type" valueNumeric="2"/>
+            <column name="mrc_code" value="AI"/>
+            <column name="event_label" value="Divorce"/>
+            <column name="event_category" value="QUALIFYING_EVENT"/>
+            <column name="is_financial" value="N"/>
+            <column name="change_type" value="QUALIFYING_EVENT"/>
+            <column name="display_on_ui" value="Y"/>
+            <column name="allow_future_event" value="N"/>
+            <column name="is_gated" value="N"/>
+            <column name="source" value="EXCHANGE"/>
+            <column name="verification_reqd" value="SSAC, VLP"/>
+            <column name="eligibility_rerun_reqd" value="Y"/>
+            <column name="manual_verification_reqd" value="N"/>
+            <column name="allow_plan_selection" valueNumeric="1"/>
+            <column name="effective_start_date" value="null"/>
+            <column name="effective_end_date" value="null"/>
+            <column name="market_stabilization" value="true"/>
+            <column name="multiple_change_plan" valueNumeric="0"/>
+        </insert>
+        <insert tableName="sep_enrollment_events">
+            <column name="id" valueNumeric="1514"/>
+            <column name="event_name" value="ROP_EXPIRATION"/>
+            <column name="event_type" valueNumeric="2"/>
+            <column name="mrc_code" value="AI"/>
+            <column name="event_label" value="Reasonable Opportunity Period Expiration"/>
+            <column name="event_category" value="OTHER"/>
+            <column name="is_financial" value="Y"/>
+            <column name="change_type" value="OTHER"/>
+            <column name="display_on_ui" value="N"/>
+            <column name="allow_future_event" value="N"/>
+            <column name="is_gated" value="N"/>
+            <column name="source" value="ALL"/>
+            <column name="manual_verification_reqd" value="Y"/>
+            <column name="allow_plan_selection" valueNumeric="0"/>
+            <column name="effective_start_date" value="2020-12-31T18:30:00.000Z"/>
+            <column name="effective_end_date" value="2500-12-30T18:30:00.000Z"/>
+            <column name="market_stabilization" value="true"/>
+            <column name="multiple_change_plan" valueNumeric="0"/>
+        </insert>
+        <insert tableName="sep_enrollment_events">
+            <column name="id" valueNumeric="1499"/>
+            <column name="event_name" value="ROP_EXPIRATION"/>
+            <column name="event_type" valueNumeric="2"/>
+            <column name="mrc_code" value="AI"/>
+            <column name="event_label" value="Reasonable Opportunity Period Expiration"/>
+            <column name="event_category" value="REMOVE"/>
+            <column name="is_financial" value="Y"/>
+            <column name="change_type" value="REMOVE"/>
+            <column name="display_on_ui" value="N"/>
+            <column name="allow_future_event" value="N"/>
+            <column name="is_gated" value="N"/>
+            <column name="source" value="ALL"/>
+            <column name="manual_verification_reqd" value="Y"/>
+            <column name="allow_plan_selection" valueNumeric="0"/>
+            <column name="effective_start_date" value="2020-12-31T18:30:00.000Z"/>
+            <column name="effective_end_date" value="2500-12-30T18:30:00.000Z"/>
+            <column name="market_stabilization" value="true"/>
+            <column name="multiple_change_plan" valueNumeric="0"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

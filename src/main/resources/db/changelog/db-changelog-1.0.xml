@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="create_table" author="Harsh">
+        <createTable tableName="sep_enrollment_events">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="event_name" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="event_type" type="int">
+                <constraints nullable="false" />
+            </column>
+            <column name="mrc_code" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="event_label" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="event_category" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="event_category_label" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_financial" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="change_type" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="event_precedence_order" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="verification_reqd" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="eligibility_rerun_reqd" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="display_on_ui" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="allow_future_event" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="reference_future_event" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_gated" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="source" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="reqd_documents" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="read_time_verification" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="manual_verification_reqd" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="allow_plan_selection" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="effective_start_date" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="effective_end_date" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="override_automation" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="use_sep_event_for_change_plan" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="event_label_es" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="condition" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="action" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="auto_apply" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="checksum" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="version" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="buffer_days" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="market_stabilization" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="multiple_change_plan" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
