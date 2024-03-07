@@ -3,14 +3,29 @@
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
-    <changeSet id="updating" author="Harsh">
+
+    <changeSet id="updating column changed_event_label_english" author="Harsh">
+        <preConditions onFail="MARK_RAN">
+            <dbms type="mysql"/>
+            <tableExists tableName="sep_enrollment_events"/>
+            <columnExists tableName="sep_enrollment_events" columnName="changed_event_label_english"/>
+        </preConditions>
+
         <update tableName="sep_enrollment_events">
             <column name="changed_event_label_english" value="The value is updated" />
             <where>id="203"</where>
         </update>
+    </changeSet>
+
+    <changeSet id="updating column changed_event_label_spanish" author="Harsh">
+        <preConditions onFail="MARK_RAN">
+            <dbms type="mysql"/>
+            <tableExists tableName="sep_enrollment_events"/>
+            <columnExists tableName="sep_enrollment_events" columnName="changed_event_label_spanish"/>
+        </preConditions>
         <update tableName="sep_enrollment_events">
             <column name="changed_event_label_spanish" value="The value is updated" />
-            <where>id="4"</where>
+            <where>id="203"</where>
         </update>
     </changeSet>
 </databaseChangeLog>
