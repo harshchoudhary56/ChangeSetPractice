@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="updating" author="Harsh">
+        <update tableName="sep_enrollment_events">
+            <column name="changed_event_label_english" value="The value is updated" />
+            <where>id="203"</where>
+        </update>
+        <update tableName="sep_enrollment_events">
+            <column name="changed_event_label_spanish" value="The value is updated" />
+            <where>id="4"</where>
+        </update>
+    </changeSet>
+</databaseChangeLog>
